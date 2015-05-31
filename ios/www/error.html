@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Sempre Exclusivo - Sem conexão ativa</title>    
+	<meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="plugins/Font-Awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body  >
+      
+<div class="container">
+	<div class="col-lg-8 col-lg-offset-2 text-center">
+	
+		<div class="logo">
+		<h1>Ops, ocorreu um erro!</h1>
+		</div>
+		<div class="clearfix"></div>            
+		<p class="text-muted">Tente novamente, ou volte para página inicial.</p>
+		
+		<div class="clearfix"></div>
+		<br />
+		<div class="clearfix"></div>
+		<br />
+		
+		<div class="col-lg-6  col-lg-offset-3">
+			<div class="btn-group btn-group-justified">
+				<a href="index.html" class="btn btn-primary"><i class="icon-refresh"></i> Recarregar</a>
+				<a href="javascritip:void(0);" onclick="exitApp()" class="btn btn-danger"><i class="icon-signout"></i> Sair</a> 
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		function exitApp(){
+			if(navigator.app){
+				navigator.app.exitApp();
+			}else if(navigator.device){
+				navigator.device.exitApp();
+			}
+		}
+	</script>
+</html>
